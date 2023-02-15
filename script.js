@@ -12,7 +12,7 @@ function Verdadeiro() {
 function Falso() {
     swal({
       title: "ERROU",
-      text: "ERROU A SENHA",
+      text: "VOCÊ ERROU A SENHA, TENTE NOVAMENTE",
       icon: "error",
       button: "FECHAR",
         });
@@ -24,6 +24,7 @@ function validacao() {
 
       if (login == "admin" && senha == "admin") {
         window.Verdadeiro();
+        location.href ="https://joserobson2301.github.io/webplacestore/";
       }else{
         window.Falso();
       }
@@ -43,9 +44,9 @@ function validacao() {
             icon: "success",
           });
         } else {
-          swal("SEU ACESSO FOI NEGADO!!!", {
-            icon: "error",
-          });
+            swal("SEU ACESSO FOI NEGADO!!!", {
+                icon: "error",
+            });
         }
-      });
-  }  
+    });
+  }
