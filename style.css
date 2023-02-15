@@ -1,7 +1,9 @@
 body {
     width: 99%;
     height: 99%;
-    background-color: rgb(241, 237, 237);
+    background-image: url(./tela-de-fundo.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 330px;
     margin: 200px auto;
     text-align: center;
@@ -13,4 +15,25 @@ input {
     width: 250px;
     height: 30px;
     outline: none;
+}
+
+.btn-tst {
+    position: absolute;
+    transform: translate(500px, -350px);
+    padding: 15px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    opacity: 50%;
+    background-color: transparent;
+}
+.btn-tst:hover {
+    opacity: 100%;
+    transition: 0.4s;
+}
+
+h3 {
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
 }
