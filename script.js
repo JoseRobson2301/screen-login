@@ -33,7 +33,7 @@ function validacao() {
   function alerta() {
     swal({
         title: "",
-        text: "TEM CERTEZA QUE VOCÊ QUER ACESSAR ESSE SITE? -_-",
+        text: "TEM CERTEZA QUE QUER ACESSAR ESSE SITE? -_-",
         icon: "info",
         buttons: true,
         dangerMode: false,
@@ -49,4 +49,53 @@ function validacao() {
             });
         }
     });
+  }
+
+
+
+
+
+
+
+  function escrever (){
+    swal({
+        text: 'O que você quer pesquisar?',
+        content: "input",
+        button: {
+          text: "Search!",
+          closeModal: false,
+        },
+      })
+      .then(name => {
+        if (!name) throw null;
+       
+        return fetch(`https://itunes.apple.com/search?term=${name}&entity=movie`);
+      })
+      .then(results => {
+        return results.json();
+      })
+      .then(json => {
+        const movie = json.results[0];
+       
+        if (!movie) {
+          return swal("Não Encontramos");
+        }
+       
+        const name = movie.trackName;
+        const imageURL = movie.artworkUrl100;
+       
+        swal({
+          title: "Encontramos:",
+          text: name,
+          icon: imageURL,
+        });
+      })
+      .catch(err => {
+        if (err) {
+          swal(":(", "Não Encontramos", "error");
+        } else {
+          swal.stopLoading();
+          swal.close();
+        }
+      });
   }
