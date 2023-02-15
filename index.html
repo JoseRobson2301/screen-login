@@ -11,7 +11,9 @@
         <h3>Tela De Login ADM</h3>
         <input type="text" placeholder="usuario" id="login">
         <input type="password" placeholder="senha" id="senha">
-        <input type="submit" onclick="validacao()">
+        <input type="submit" onclick="validacao(); return false">
+
+        <button class="btn-tst" type="text" placeholder="teste" onclick="escrever()" id="teste">CLIQUE PARA AJUDA</button>
 </body>
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
