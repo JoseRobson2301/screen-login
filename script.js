@@ -33,7 +33,7 @@ function validacao() {
   function alerta() {
     swal({
         title: "",
-        text: "TEM CERTEZA QUE QUER ACESSAR ESSE SITE? -_-",
+        text: "TEM CERTEZA QUE VOCÊ QUER ACESSAR ESSE SITE? -_-",
         icon: "info",
         buttons: true,
         dangerMode: false,
