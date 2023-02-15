@@ -18,8 +18,6 @@ input {
 }
 
 .btn-tst {
-    position: absolute;
-    transform: translate(500px, -350px);
     padding: 15px;
     width: 150px;
     border: none;
